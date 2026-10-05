@@ -1,0 +1,536 @@
+[
+{
+  "model": "advisory.cropadvisory",
+  "pk": 1,
+  "fields": {
+    "crop_name": "Maize",
+    "crop_category": "Cereal crop - TEST",
+    "planting_season": "April - June",
+    "soil_type": "Fertile, well-drained loamy soil",
+    "planting_advice": "Plant when adequate soil moisture is available. Use healthy, certified seeds and maintain appropriate spacing.",
+    "fertilizer_advice": "Apply well-decomposed organic manure and recommended fertilizer according to soil conditions.",
+    "pest_information": "Monitor regularly for fall armyworms and other common maize pests.",
+    "disease_information": "Monitor for maize streak disease and other common crop diseases.",
+    "harvesting_advice": "Harvest when the maize cobs are mature and the grains have reached the appropriate level of dryness.",
+    "created_at": "2026-08-12T10:29:30.105Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 2,
+  "fields": {
+    "crop_name": "Sorghum",
+    "crop_category": "cereal",
+    "planting_season": "April to June, depending on rainfall",
+    "soil_type": "well-drained loamy or sandy-loam soil with good fertility",
+    "planting_advice": "Plant sorghum at the beginning of the rainy season when the soil has adequate moisture. Prepare the land properly and plant seeds in well-prepared, weed-free soil. Sow seeds about 2–5 cm deep, leaving approximately 20–30 cm between plants and 60–75 cm between rows. Thin overcrowded seedlings after emergence to give plants enough space to grow. Use good-quality, disease-free seeds and replant gaps where necessary.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and moisture retention. Where available, apply a suitable basal fertilizer containing nitrogen, phosphorus and potassium according to local soil conditions. Avoid excessive nitrogen because it can cause weak, tall plants and increase the risk of lodging. A nitrogen top-dressing may be applied during early growth when the crop shows signs of nutrient deficiency.",
+    "pest_information": "Common sorghum pests include sorghum shoot fly, stem borers, aphids, sorghum midge and birds. These pests can damage seedlings, stems, leaves and developing grain. Monitor the crop regularly, especially during early growth and grain formation. Use healthy seeds, maintain proper plant spacing, control weeds and remove heavily infested plant material. Where necessary, use locally recommended pest-control measures according to agricultural extension advice and product instructions.",
+    "disease_information": "Common sorghum diseases include anthracnose, grain mold, downy mildew, leaf blight and smut. Symptoms may include leaf spots, discoloration, wilting, poor plant growth and moldy or discolored grains. Use disease-resistant varieties where available, plant healthy seeds, maintain proper spacing and avoid excessive moisture around plants. Remove severely affected plant material and follow recommended disease-management practices. Where fungicides are necessary, use only locally approved products according to the label and agricultural extension advice.",
+    "harvesting_advice": "Harvest sorghum when the grains are fully mature, hard and have reached the appropriate dry condition. The leaves and panicles usually become dry and change color as the crop matures. Cut the panicles carefully and dry the grain thoroughly before storage. Remove damaged or moldy grains and store the clean, dry grain in a cool, dry and well-ventilated place to reduce the risk of insect damage and mold.",
+    "created_at": "2026-08-14T07:43:59.775Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 3,
+  "fields": {
+    "crop_name": "Common Beans",
+    "crop_category": "legume",
+    "planting_season": "At the beginning of the rainy season when adequate soil moisture is available.",
+    "soil_type": "well-drained loamy soil with good organic matter and moderate fertility.",
+    "planting_advice": "Plant common beans at the beginning of the rainy season when the soil has adequate moisture. Prepare the land well and plant healthy, disease-free seeds in clean, weed-free soil. Sow seeds about 3–5 cm deep, with approximately 10–20 cm between plants and 40–50 cm between rows. Avoid waterlogged areas and maintain adequate spacing to improve air circulation and reduce disease problems.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and organic matter. Beans can fix some nitrogen through their root nodules, so avoid excessive nitrogen fertilizer. Where soil testing is available, apply phosphorus and potassium according to the soil requirements. If the crop shows nutrient deficiency or grows poorly, use locally recommended fertilizer or organic amendments based on agricultural extension advice.",
+    "pest_information": "Common bean pests include bean aphids, bean beetles, thrips, pod borers and bean weevils. These pests may damage leaves, flowers, pods and stored grains, reducing crop growth and yield. Inspect plants regularly, control weeds, use healthy seeds and remove severely damaged plant material. For serious infestations, use locally recommended pest-management measures and follow agricultural extension advice and product-label instructions.",
+    "disease_information": "Common bean diseases include angular leaf spot, anthracnose, rust, bacterial blight and bean mosaic diseases. Symptoms may include leaf spots, yellowing, wilting, lesions and poor pod development. Use healthy and disease-free seeds, plant resistant varieties where available, maintain proper spacing and avoid working in the field when plants are wet. Remove severely infected plant material and follow locally recommended disease-management practices.",
+    "harvesting_advice": "Harvest common beans when the pods are mature and the seeds have developed fully. For fresh beans, pick pods while they are still tender. For dry beans, allow the pods to mature and dry on the plants before harvesting. Harvest during dry weather where possible, dry the beans thoroughly after harvesting, remove damaged or moldy seeds, and store clean, dry beans in a cool, dry and well-ventilated place to reduce storage losses.",
+    "created_at": "2026-08-14T08:07:35.832Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 4,
+  "fields": {
+    "crop_name": "Groundnuts",
+    "crop_category": "legume",
+    "planting_season": "At the beginning of the rainy season when the soil has adequate moisture.",
+    "soil_type": "well-drained sandy-loam or loamy soil  that is loose enough for pods to develop underground.",
+    "planting_advice": "Plant groundnuts at the beginning of the rainy season when there is sufficient soil moisture. Prepare the soil well and remove weeds before planting. Use healthy, good-quality seed and plant about 3–5 cm deep, leaving approximately 15–20 cm between plants and 45–60 cm between rows. Avoid waterlogged soils because excessive moisture can damage the developing pods.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and structure. Groundnuts require adequate phosphorus and calcium for healthy root development and pod formation. Where available, use soil-test results to guide fertilizer application. Avoid excessive nitrogen because groundnuts can obtain much of their nitrogen through biological nitrogen fixation. Follow locally recommended fertilizer rates and agricultural extension advice.",
+    "pest_information": "Common groundnut pests include aphids, termites, thrips, leaf miners, pod borers and groundnut rosette aphids. These pests can damage leaves, stems, roots and developing pods, reducing plant growth and yield. Inspect the crop regularly, control weeds, maintain healthy plants and use clean planting material. For serious infestations, apply locally recommended pest-management measures according to agricultural extension advice and product-label instructions.",
+    "disease_information": "Common groundnut diseases include groundnut rosette disease, early leaf spot, late leaf spot, rust and aflatoxin contamination. Symptoms may include leaf spots, yellowing, premature leaf loss, stunted growth and poor pod development. Use healthy seed, plant resistant varieties where available, maintain proper spacing and practice crop rotation. Harvest on time, dry pods thoroughly and store them under dry conditions to reduce the risk of aflatoxin contamination.",
+    "harvesting_advice": "Harvest groundnuts when the pods are mature and well developed, usually when the inside of the pods shows dark markings and most leaves begin to yellow. Carefully lift or dig the plants from the soil to avoid leaving pods behind. Allow the pods to dry thoroughly in a clean, dry place before removing them from the plants. Remove damaged or moldy pods and store properly in a cool, dry and well-ventilated place to reduce the risk of insect damage and aflatoxin contamination.",
+    "created_at": "2026-08-14T08:53:03.107Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 5,
+  "fields": {
+    "crop_name": "Cassava",
+    "crop_category": "Root Crop",
+    "planting_season": "At the beginning of the rainy season when the soil has adequate moisture..",
+    "soil_type": "Well-drained sandy-loam or loamy soil that is deep and loose enough for root development",
+    "planting_advice": "Plant healthy cassava stem cuttings at the beginning of the rainy season when there is sufficient soil moisture. Select mature, healthy stems from vigorous plants that are free from visible pests and diseases. Plant cuttings approximately 20–30 cm long at a slight angle or vertically, with about two-thirds of the cutting inserted into the soil. Maintain adequate spacing and keep the field free from weeds during early growth.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and organic matter. Cassava benefits from adequate potassium for healthy root development, while nitrogen and phosphorus should be applied according to soil conditions. Avoid excessive nitrogen because it can encourage too much leaf growth at the expense of root development. Where possible, use soil-test results and locally recommended fertilizer rates to guide application.",
+    "pest_information": "Common cassava pests include cassava mealybugs, whiteflies, cassava green mites, termites and grasshoppers. These pests may damage leaves, shoots, stems or roots, causing poor plant growth and reduced yields. Inspect cassava plants regularly, use healthy planting materials, control weeds and remove severely infested plant parts. Where necessary, use locally recommended pest-management measures and follow agricultural extension advice.",
+    "disease_information": "Common cassava diseases include cassava mosaic disease, cassava brown streak disease, bacterial blight and root rot. Symptoms may include leaf mosaic patterns, yellowing, leaf distortion, wilting, stem lesions and rotting of the roots. Use healthy, disease-free stem cuttings and plant resistant varieties where available. Remove and destroy severely affected plants, control insect vectors such as whiteflies and practice good field hygiene. Avoid planting new cassava using cuttings taken from diseased plants.",
+    "harvesting_advice": "Cassava can generally be harvested when the roots have reached a suitable size and maturity, depending on the variety and intended use. Carefully loosen the soil around the plant and lift the roots without causing unnecessary damage. Harvest only healthy roots and remove damaged or rotten ones. Cassava roots should be processed or consumed soon after harvesting because their quality deteriorates quickly. For storage or processing, follow appropriate local methods to maintain quality and safety.",
+    "created_at": "2026-08-14T09:22:01.910Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 6,
+  "fields": {
+    "crop_name": "Rice",
+    "crop_category": "Cereal",
+    "planting_season": "At the beginning of the rainy season when adequate water is available.",
+    "soil_type": "Clay-loam or loamy soil with good water-holding capacity and adequate fertility.",
+    "planting_advice": "Plant rice at the beginning of the rainy season when adequate water is available. Use healthy, high-quality seed and prepare the field properly to obtain a level, weed-free seedbed. Rice may be established by direct seeding or by transplanting healthy seedlings, depending on the local production system. Maintain appropriate spacing and ensure adequate water management during crop establishment.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility. Where available, use soil-test results to determine fertilizer requirements. Rice benefits from adequate nitrogen, phosphorus and potassium for healthy growth and grain development. Apply fertilizer at the locally recommended rate and timing, and avoid excessive nitrogen because it can cause weak growth and increase the risk of some diseases.",
+    "pest_information": "Common rice pests include rice stem borers, rice gall midge, rice hispa, aphids and grasshoppers. These pests can damage seedlings, leaves, stems and developing grains, resulting in poor plant growth and reduced yield. Monitor the crop regularly, control weeds and maintain good field hygiene. Use healthy seed and apply locally recommended pest-management measures when necessary.",
+    "disease_information": "Common rice diseases include rice blast, bacterial leaf blight, sheath blight and brown spot. Symptoms may include leaf spots, lesions, yellowing, wilting, stem damage and poor grain development. Use healthy seed, plant resistant varieties where available, maintain appropriate spacing and avoid excessive nitrogen fertilizer. Remove severely affected plant material and follow locally recommended disease-management practices.",
+    "harvesting_advice": "Harvest rice when most of the grains have matured and the panicles have turned golden or straw-colored. Drain excess water from the field before harvesting where applicable. Cut the mature panicles or plants carefully and avoid unnecessary grain loss. Dry the harvested grain thoroughly to a safe moisture level before storage, remove impurities and damaged grains, and store in clean, dry, well-ventilated conditions to protect it from insects, moisture and mold.",
+    "created_at": "2026-08-14T09:46:28.599Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 7,
+  "fields": {
+    "crop_name": "Okra",
+    "crop_category": "Vegetable",
+    "planting_season": "At the beginning of the rainy season when adequate soil moisture is available.",
+    "soil_type": "well-drained loamy or sandy-loam soil with good organic matter and fertility.",
+    "planting_advice": "Plant okra at the beginning of the rainy season when the soil has adequate moisture. Use healthy, good-quality seeds and prepare the land well before planting. Sow seeds about 2–3 cm deep and maintain adequate spacing between plants and rows to allow good growth and air circulation. Keep the field free from weeds, especially during the early stages of growth.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and organic matter. Where available, use soil-test results to determine fertilizer requirements. Okra benefits from balanced nutrients, particularly nitrogen, phosphorus and potassium for healthy leaf growth, flowering and pod development. Avoid excessive nitrogen because it may encourage excessive leaf growth and reduce pod production. Apply fertilizer at locally recommended rates.",
+    "pest_information": "Common okra pests include aphids, whiteflies, flea beetles, fruit and shoot borers, and spider mites. These pests may damage leaves, young shoots, flowers and developing pods, causing stunted growth and reduced yield. Inspect plants regularly, control weeds and remove severely infested plant parts where practical. Encourage beneficial insects and use locally recommended pest-management measures when necessary.",
+    "disease_information": "Common okra diseases include powdery mildew, fusarium wilt, damping-off and leaf spot diseases. Symptoms may include white powdery growth on leaves, yellowing, wilting, leaf spots and poor plant growth. Use healthy seeds, maintain proper spacing, provide good drainage and avoid excessive moisture on leaves. Remove severely infected plants and follow locally recommended disease-management practices where necessary.",
+    "harvesting_advice": "Harvest okra pods regularly when they are young, tender and about 5–10 cm long, depending on the variety. Pick the pods every one to two days during peak production to prevent them from becoming tough and fibrous. Use a clean knife or scissors to avoid damaging the plant. Remove over-mature pods from the plant so that production of new pods can continue. Keep harvested pods in a cool, clean place and use or market them as soon as possible to maintain quality.",
+    "created_at": "2026-08-14T11:22:14.176Z"
+  }
+},
+{
+  "model": "advisory.cropadvisory",
+  "pk": 8,
+  "fields": {
+    "crop_name": "Sesame",
+    "crop_category": "Oilseed",
+    "planting_season": "At the beginning of the rainy season when adequate soil moisture is available.",
+    "soil_type": "well-drained sandy-loam or loamy soil with good drainage and moderate fertility.",
+    "planting_advice": "Plant sesame at the beginning of the rainy season when there is sufficient soil moisture. Prepare a fine, weed-free seedbed because sesame seeds are small and require good soil contact for emergence. Sow healthy seeds shallowly, about 1–2 cm deep, and maintain appropriate spacing between rows and plants. Thin overcrowded seedlings after emergence and control weeds during the early stages of growth.",
+    "fertilizer_advice": "Apply well-decomposed manure or compost before planting to improve soil fertility and organic matter. Sesame generally performs well in moderately fertile soils and requires balanced nutrients for healthy growth and seed production. Where available, use soil-test results to guide fertilizer application. Avoid excessive nitrogen because it can encourage excessive vegetative growth and may increase the risk of lodging. Follow locally recommended fertilizer rates.",
+    "pest_information": "Common sesame pests include sesame webworms, gall midge, aphids, whiteflies and leafhoppers. These pests may damage leaves, shoots, flowers and developing seed capsules, reducing plant growth and seed yield. Inspect the crop regularly, control weeds and remove severely infested plant material where practical. Maintain good field hygiene and use locally recommended pest-management measures when necessary.",
+    "disease_information": "Common sesame diseases include sesame phyllody, fusarium wilt, charcoal rot and leaf spot diseases. Symptoms may include abnormal flowering, leaf spots, yellowing, wilting, stem discoloration and poor seed development. Use healthy, disease-free seed, plant resistant varieties where available, maintain proper spacing and ensure good soil drainage. Practice crop rotation, remove severely infected plants and follow locally recommended disease-management practices.",
+    "harvesting_advice": "Harvest sesame when the lower leaves begin to yellow and the seed capsules have matured and started to change color, but before most capsules open and release their seeds. Cut the plants carefully and tie them into small bundles for drying in a clean, dry place. Place the bundles on a suitable surface to collect seeds as the capsules open. Clean the harvested seed and dry it thoroughly before storing in clean, dry and well-ventilated conditions to protect it from moisture, insects and mold.",
+    "created_at": "2026-08-14T11:42:13.294Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 1,
+  "fields": {
+    "crop_name": "Maize",
+    "problem_name": "Fall Armyworm",
+    "problem_type": "Pest",
+    "symptoms": "Irregular holes and feeding damage on maize leaves. Young larvae may cause window-pane damage, while older larvae can severely damage the central leaves.",
+    "causes": "Infestation by fall armyworm larvae, which feed on maize plants and can spread rapidly under favorable conditions.",
+    "prevention": "Regularly inspect maize fields, use healthy seeds, maintain good field sanitation, and monitor young plants for early signs of infestation.",
+    "control_measures": "Remove and destroy heavily infested plants where practical. Encourage natural enemies and use recommended pest-control measures when infestation reaches damaging levels.",
+    "created_at": "2026-08-13T13:45:46.651Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 2,
+  "fields": {
+    "crop_name": "Sorghum",
+    "problem_name": "Sorghum Shoot Fly",
+    "problem_type": "pest",
+    "symptoms": "Young sorghum plants may show wilting and drying of the central leaf, commonly known as dead heart. Damaged seedlings may stop growing and can be easily pulled from the soil. Older plants may show reduced growth and poor tillering.",
+    "causes": "The damage is caused by sorghum shoot fly larvae, which feed inside the central shoot of young sorghum plants. The pest is more damaging when seedlings are exposed to infestation during the early growth stage",
+    "prevention": "Plant sorghum early with the onset of reliable rainfall and use healthy, vigorous seed. Maintain proper plant density, remove severely damaged seedlings and control weeds that may provide shelter for pests. Use locally recommended resistant or tolerant varieties where available.",
+    "control_measures": "Monitor young sorghum plants regularly for signs of dead heart. Remove and destroy severely affected plants where practical. Maintain good crop management and use locally recommended insect-control measures when infestation is serious. Follow agricultural extension recommendations and all product-label instructions when pesticides are used.",
+    "created_at": "2026-08-14T07:54:28.446Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 3,
+  "fields": {
+    "crop_name": "Common Beans",
+    "problem_name": "Beans Aphids",
+    "problem_type": "Pest",
+    "symptoms": "Infested bean plants may have curled, distorted or yellowing leaves. Aphids often occur in clusters on young shoots, leaves and the undersides of leaves. Severe infestation can cause stunted growth and reduced plant development.",
+    "causes": "The damage is caused by aphids feeding on plant sap, particularly on young shoots and tender leaves. Aphids can multiply rapidly under favorable conditions and may also transmit some plant viruses.",
+    "prevention": "Inspect bean plants regularly, especially young shoots and the undersides of leaves. Keep the field free from excessive weeds, maintain healthy plant growth and use resistant or tolerant varieties where available. Encourage beneficial insects such as ladybirds that naturally feed on aphids.",
+    "control_measures": "Remove heavily infested plant parts where practical and encourage natural predators. For serious infestations, use locally recommended aphid-control measures and follow agricultural extension advice. If an approved pesticide is required, follow the product label carefully and observe the recommended safety precautions.",
+    "created_at": "2026-08-14T08:33:16.387Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 4,
+  "fields": {
+    "crop_name": "Common Beans",
+    "problem_name": "Beans Anthracnose",
+    "problem_type": "Disease",
+    "symptoms": "Symptoms may include dark, sunken lesions on stems, leaf veins and pods. Leaves may develop brown or black spots, and infected pods can develop dark lesions that may contain pinkish fungal growth under moist conditions. Severe infection can cause poor seed development and reduced yield.",
+    "causes": "Bean anthracnose is caused by a fungal pathogen that can survive on infected seed and crop residues. The disease spreads more easily under warm, humid or wet conditions, especially when infected plants are handled while wet.",
+    "prevention": "Use certified or disease-free seed and plant resistant varieties where available. Maintain adequate spacing to improve air circulation, avoid working among wet plants, remove infected crop residues and practice crop rotation with non-host crops. Keep the field well managed and avoid overhead irrigation where possible",
+    "control_measures": "Remove and destroy severely infected plant material and avoid saving seed from diseased crops. Use locally recommended fungicide treatments when necessary and follow agricultural extension advice and product-label instructions. Rotate beans with suitable non-host crops to reduce disease pressure in subsequent seasons.",
+    "created_at": "2026-08-14T08:40:06.642Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 5,
+  "fields": {
+    "crop_name": "Groundnuts",
+    "problem_name": "Groundnuts Rosette Aphid",
+    "problem_type": "Pest",
+    "symptoms": "Plants may show yellowing, mottling and curling of young leaves, followed by stunted growth. Infected plants may remain small and produce few or poorly developed pods. Aphids may be found on young shoots and the undersides of leaves.",
+    "causes": "The damage is caused by aphids feeding on groundnut plants. Some aphids can also transmit the viruses associated with groundnut rosette disease, allowing the disease to spread rapidly within a field.",
+    "prevention": "Plant early with the onset of reliable rainfall, use healthy seed and maintain good field hygiene. Control weeds that can harbor aphids, monitor young plants regularly and use resistant or tolerant varieties where available.",
+    "control_measures": "Monitor the crop regularly for aphids and early symptoms. Remove severely affected plants where practical and control aphid populations using locally recommended methods. Where an approved insecticide is necessary, follow agricultural extension recommendations and all product-label instructions.",
+    "created_at": "2026-08-14T09:01:06.006Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 6,
+  "fields": {
+    "crop_name": "Groundnuts",
+    "problem_name": "Groundnuts Rosette Disease",
+    "problem_type": "Disease",
+    "symptoms": "Affected plants may show yellowing, mottling or mosaic patterns on the leaves, with shortened stems and stunted growth. Plants may remain small and produce few or poorly developed pods. Symptoms can spread rapidly through a groundnut field when conditions favor the insect vector.",
+    "causes": "Groundnut rosette disease is caused by a complex of plant viruses and is commonly spread from infected plants to healthy plants by aphids. The disease can spread quickly when susceptible groundnut varieties are grown and aphid populations are high.",
+    "prevention": "Use healthy, certified or disease-free seed and plant resistant or tolerant varieties where available. Plant early with reliable rainfall, maintain good field hygiene and control weeds that may harbor aphids. Regularly inspect young plants and remove severely affected plants where practical.",
+    "control_measures": "Remove and destroy severely infected plants where practical to reduce sources of infection. Manage aphid populations using locally recommended methods and maintain good crop management. Where insecticides are recommended, use only approved products and follow agricultural extension advice and product-label instructions.",
+    "created_at": "2026-08-14T09:06:23.479Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 7,
+  "fields": {
+    "crop_name": "Cassava",
+    "problem_name": "Cassava Mealybug",
+    "problem_type": "pest",
+    "symptoms": "Cassava plants may show curled or distorted young leaves, shortened shoots, stunted growth and reduced plant vigor. Mealybugs may appear as small, soft-bodied insects covered with a whitish waxy material on young shoots, leaves and stems.",
+    "causes": "The damage is caused by cassava mealybugs feeding on plant sap, particularly on young shoots and leaves. Infestations can become severe under favorable conditions and may reduce plant growth and root yield.",
+    "prevention": "Use healthy, pest-free cassava stem cuttings and inspect planting material before planting. Maintain good field hygiene, control weeds and regularly monitor young shoots for signs of infestation. Encourage natural enemies of mealybugs where possible.",
+    "control_measures": "Remove and destroy heavily infested plant parts where practical. Use healthy planting material and encourage natural predators. For serious infestations, follow locally recommended pest-management measures and agricultural extension advice. Use approved pesticides only when necessary and according to product-label instructions.",
+    "created_at": "2026-08-14T09:30:30.854Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 8,
+  "fields": {
+    "crop_name": "Cassava",
+    "problem_name": "Cassava Mosaic Disease",
+    "problem_type": "Disease",
+    "symptoms": "Affected cassava plants develop yellow and green mosaic patterns on the leaves. Leaves may become distorted, smaller than normal and uneven in shape. Severely affected plants may become stunted and produce smaller or fewer roots, resulting in reduced yield.",
+    "causes": "Cassava mosaic disease is caused by viruses and is commonly spread from infected planting materials and by whiteflies that transmit the viruses from infected plants to healthy plants.",
+    "prevention": "Use healthy, disease-free cassava stem cuttings and plant resistant or tolerant varieties where available. Inspect planting materials before planting, remove severely affected plants and control weeds that may provide shelter for insect vectors. Avoid using cuttings from diseased plants.",
+    "control_measures": "Remove and destroy severely infected plants to reduce sources of infection. Use healthy planting materials and resistant or tolerant varieties where available. Monitor and manage whitefly populations using locally recommended methods. Follow agricultural extension recommendations for effective disease management.",
+    "created_at": "2026-08-14T09:35:47.964Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 9,
+  "fields": {
+    "crop_name": "Rice",
+    "problem_name": "Rice Stem Borer",
+    "problem_type": "Pest",
+    "symptoms": "Young rice plants may develop dead hearts, where the central shoot dries and can be pulled out easily. Older plants may develop whiteheads, where the panicle becomes white and produces few or no grains. Infested stems may contain larvae or feeding damage.",
+    "causes": "The damage is caused by rice stem borer larvae that enter and feed inside the rice stems. The larvae damage the plant's internal tissues and interfere with the movement of water and nutrients.",
+    "prevention": "Use healthy planting material and maintain good field sanitation. Remove and destroy heavily infested plant residues after harvest, control weeds around the field and monitor the crop regularly for early signs of infestation. Avoid excessive nitrogen fertilizer, which can encourage conditions favorable to some stem borer infestations.",
+    "control_measures": "Monitor the crop regularly for dead hearts and whiteheads. Remove severely affected plants where practical and destroy crop residues after harvest. Use locally recommended biological, cultural or chemical control measures when infestation is serious. Follow agricultural extension advice and product-label instructions when pesticides are used.",
+    "created_at": "2026-08-14T09:52:00.312Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 10,
+  "fields": {
+    "crop_name": "Rice",
+    "problem_name": "Rice Blast",
+    "problem_type": "Disease",
+    "symptoms": "Rice blast may cause diamond-shaped or spindle-shaped lesions with gray centers and darker margins on the leaves. Lesions may also develop on the neck and other parts of the plant. Severe infection can cause panicles to break or produce poorly filled grains, resulting in reduced yield.",
+    "causes": "Rice blast is caused by a fungal pathogen that can spread through infected seed, crop residues and airborne spores. Disease development is favored by prolonged leaf wetness, high humidity, poor field conditions and excessive nitrogen fertilizer.",
+    "prevention": "Use healthy seed and plant rice varieties that are resistant or tolerant to blast where available. Maintain proper plant spacing and balanced fertilizer application. Avoid excessive nitrogen, maintain good field sanitation and remove infected crop residues after harvest.",
+    "control_measures": "Monitor the crop regularly for early symptoms and remove severely affected plant material where practical. Maintain balanced crop nutrition and good field management. Where fungicide treatment is necessary, use locally approved products according to agricultural extension recommendations and product-label instructions.",
+    "created_at": "2026-08-14T09:56:44.496Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 11,
+  "fields": {
+    "crop_name": "Okra",
+    "problem_name": "Okra Aphids",
+    "problem_type": "pest",
+    "symptoms": "Infested okra plants may have curled, distorted or yellowing leaves. Aphids often gather in clusters on young shoots, tender leaves and the undersides of leaves. Heavy infestations can cause stunted growth, reduced plant vigor and poor pod development.",
+    "causes": "The damage is caused by aphids feeding on plant sap, especially on young shoots and leaves. Aphid populations can increase rapidly under favorable conditions and some aphids may also transmit plant viruses",
+    "prevention": "Inspect okra plants regularly, especially young shoots and the undersides of leaves. Control weeds around the field, maintain healthy plant growth and encourage beneficial insects such as ladybirds and other natural predators. Use tolerant varieties where available.",
+    "control_measures": "Remove heavily infested plant parts where practical and encourage natural predators. For serious infestations, use locally recommended aphid-control measures. If an approved pesticide is necessary, follow agricultural extension advice, product-label instructions and recommended safety precautions.",
+    "created_at": "2026-08-14T11:27:44.147Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 12,
+  "fields": {
+    "crop_name": "Okra",
+    "problem_name": "Okra Powdery Mildew",
+    "problem_type": "Disease",
+    "symptoms": "Affected okra leaves develop white or gray powdery patches on the upper or lower leaf surfaces. The infected leaves may become yellow, curl, dry and fall prematurely. Severe infection can reduce plant growth and pod production.",
+    "causes": "Powdery mildew is caused by fungal pathogens that spread through spores. The disease can develop rapidly under conditions of high humidity and poor air circulation around plants.",
+    "prevention": "Maintain adequate spacing between okra plants to improve air circulation. Use healthy seeds and resistant or tolerant varieties where available. Control weeds around the crop and avoid excessive nitrogen fertilizer. Inspect plants regularly and remove severely infected leaves where practical.",
+    "control_measures": "Remove and destroy severely infected plant material where practical. Improve air circulation by maintaining proper spacing and controlling excessive vegetation. If disease pressure is high, use locally approved fungicides according to agricultural extension recommendations and product-label instructions.",
+    "created_at": "2026-08-14T11:32:30.282Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 13,
+  "fields": {
+    "crop_name": "Sesame",
+    "problem_name": "Sesame Webworm",
+    "problem_type": "pest",
+    "symptoms": "Infested sesame plants may have leaves that are webbed together, folded or eaten by caterpillars. Young shoots and developing leaves may be damaged, resulting in poor plant growth and reduced seed production when infestation is severe.",
+    "causes": "The damage is caused by the larvae of sesame webworm moths. The caterpillars feed on leaves and young plant parts and may protect themselves by tying leaves together with silk.",
+    "prevention": "Inspect sesame plants regularly, especially during early growth. Control weeds around the field, remove and destroy heavily infested plant parts where practical and maintain good field hygiene. Use healthy planting material and encourage natural enemies of the pest.",
+    "control_measures": "Monitor the crop regularly and remove webbed or heavily infested plant parts where practical. Encourage natural predators and use locally recommended biological or chemical control measures when infestation is serious. Follow agricultural extension recommendations and product-label instructions when pesticides are used.",
+    "created_at": "2026-08-14T12:13:00.320Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 14,
+  "fields": {
+    "crop_name": "Sesame",
+    "problem_name": "Sesame Phyllody",
+    "problem_type": "Disease",
+    "symptoms": "Affected sesame plants may develop abnormal leafy growth in the flowers, with flowers becoming green and leaf-like. The normal formation of flowers and seed capsules is disrupted, and infected plants may become stunted and produce little or no viable seed.",
+    "causes": "Sesame phyllody is associated with phytoplasmas and is commonly spread by insect vectors such as leafhoppers. The disease can spread when infected plants and insect vectors are present in the field.",
+    "prevention": "Use healthy planting material and plant varieties with resistance or tolerance where available. Remove and destroy infected plants as soon as they are identified, control weeds that may harbor disease or insect vectors, and maintain good field hygiene. Monitor the crop regularly for early symptoms.",
+    "control_measures": "Remove and destroy severely infected plants to reduce sources of infection. Control insect vectors using locally recommended integrated pest-management practices and maintain good weed management. Where insecticides are recommended, use only approved products according to agricultural extension advice and product-label instructions.",
+    "created_at": "2026-08-14T12:20:10.696Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 15,
+  "fields": {
+    "crop_name": "Maize",
+    "problem_name": "Maize Streak Disease",
+    "problem_type": "Disease",
+    "symptoms": "Yellow or pale green streaks appear along the maize leaves. Severely affected plants may become stunted and produce small or poorly developed cobs.",
+    "causes": "Maize streak disease is caused by maize streak virus and is mainly transmitted by leafhopper insects.",
+    "prevention": "Use disease-resistant maize varieties where available, use healthy seed, control weeds that may host disease vectors, and regularly monitor the field for symptoms.",
+    "control_measures": "Remove severely infected plants where appropriate, control leafhopper vectors using locally recommended methods, maintain field hygiene, and use resistant varieties in future planting seasons.",
+    "created_at": "2026-09-25T11:34:15.003Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 16,
+  "fields": {
+    "crop_name": "Maize",
+    "problem_name": "Northern Corn Leaf Blight",
+    "problem_type": "Disease",
+    "symptoms": "Long, grey-green to brown cigar-shaped lesions appear on maize leaves. Severe infection can cause large areas of leaves to dry and may reduce grain yield.",
+    "causes": "Northern corn leaf blight is caused by a fungal pathogen that survives in infected crop residues and can spread through airborne spores.",
+    "prevention": "Use resistant maize varieties where available, remove or properly manage infected crop residues, practice crop rotation, and avoid conditions that encourage prolonged leaf wetness.",
+    "control_measures": "Remove or manage infected crop residues, practice crop rotation, use resistant varieties, and apply locally recommended fungicide treatments when necessary and appropriate.",
+    "created_at": "2026-09-25T11:36:11.595Z"
+  }
+},
+{
+  "model": "advisory.pestdisease",
+  "pk": 17,
+  "fields": {
+    "crop_name": "Maize",
+    "problem_name": "Common Rust",
+    "problem_type": "Disease",
+    "symptoms": "Small reddish-brown or rust-colored spots develop on maize leaves. Severe infection can cause premature leaf drying and reduce plant productivity.",
+    "causes": "Common rust is caused by a fungal pathogen that produces spores capable of spreading between maize plants.",
+    "prevention": "Plant resistant varieties where available, maintain good field management, monitor plants regularly, and avoid planting conditions that favor prolonged leaf moisture.",
+    "control_measures": "Use resistant varieties, remove heavily infected plant material where appropriate, maintain field hygiene, and use locally recommended fungicides when necessary.",
+    "created_at": "2026-09-25T11:38:14.217Z"
+  }
+},
+{
+  "model": "advisory.farmingtip",
+  "pk": 1,
+  "fields": {
+    "title": "Proper Soil Preparation",
+    "category": "Soil Management",
+    "description": "Proper soil preparation is important for good crop establishment, healthy root development and improved crop productivity. Farmers should prepare the land according to the crop and local soil conditions.",
+    "practical_advice": "Clear weeds and unwanted vegetation before planting. Plough or dig the soil to an appropriate depth, break large soil clods and level the field where necessary. Add well-decomposed manure or compost to improve soil structure and fertility. Avoid working very wet soil because this can damage soil structure.",
+    "season": "Before the planting season",
+    "created_at": "2026-08-15T08:50:56.767Z"
+  }
+},
+{
+  "model": "advisory.farmingtip",
+  "pk": 2,
+  "fields": {
+    "title": "Water Conservation in Farming",
+    "category": "Water Management",
+    "description": "Water is essential for crop growth, but limited or poorly managed water can reduce agricultural productivity. Farmers should use available water efficiently and protect soil moisture, especially during periods of low rainfall.",
+    "practical_advice": "Use rainwater efficiently by preparing the land to reduce runoff and erosion. Apply mulch around suitable crops to reduce evaporation and conserve soil moisture. Control weeds because they compete with crops for water. Where irrigation is available, water crops according to their needs and avoid unnecessary overwatering.",
+    "season": "Dry season and periods of low rainfall",
+    "created_at": "2026-08-15T08:54:52.607Z"
+  }
+},
+{
+  "model": "advisory.farmingtip",
+  "pk": 3,
+  "fields": {
+    "title": "Effective Weed Management",
+    "category": "Weed Management",
+    "description": "Weeds compete with crops for water, nutrients, sunlight and space. Heavy weed infestation can reduce crop growth and significantly lower yields, especially during the early stages of crop development.",
+    "practical_advice": "Keep fields clean before planting and control weeds early in the growing season. Use hand weeding, hoeing or other suitable methods according to the crop and field conditions. Mulching can help suppress weed growth and conserve soil moisture. Avoid allowing weeds to produce seeds because this increases weed problems in future seasons.",
+    "season": "Early and throughout the growing season",
+    "created_at": "2026-08-15T08:58:30.423Z"
+  }
+},
+{
+  "model": "advisory.farmingtip",
+  "pk": 4,
+  "fields": {
+    "title": "Integrated Pest Management",
+    "category": "Pest Management",
+    "description": "Integrated Pest Management (IPM) is an approach that combines different safe and practical methods to prevent and control agricultural pests. It helps farmers reduce crop losses while protecting beneficial organisms and the environment.",
+    "practical_advice": "Inspect crops regularly and identify pests before taking control measures. Keep fields and surrounding areas free from unnecessary weeds and crop residues that may harbor pests. Encourage natural enemies such as beneficial insects. Use physical or cultural control methods where practical, and use approved pesticides only when necessary and according to agricultural extension recommendations and product-label instructions.",
+    "season": "Throughout the growing season",
+    "created_at": "2026-08-15T09:03:18.223Z"
+  }
+},
+{
+  "model": "advisory.farmingtip",
+  "pk": 5,
+  "fields": {
+    "title": "Crop Rotation for Healthy Soil",
+    "category": "Soil Management",
+    "description": "Crop rotation involves growing different crops on the same piece of land in a planned sequence across different seasons. It can help maintain soil fertility, reduce the buildup of certain pests and diseases, and improve long-term farm productivity.",
+    "practical_advice": "Avoid planting the same crop or closely related crops repeatedly on the same land. Rotate cereal crops such as maize or sorghum with legumes such as beans or groundnuts where suitable. Incorporate appropriate organic matter into the soil and keep records of crops planted in each field to help plan future rotations.",
+    "season": "Across successive planting seasons",
+    "created_at": "2026-08-15T09:07:26.526Z"
+  }
+},
+{
+  "model": "advisory.livestockadvisory",
+  "pk": 1,
+  "fields": {
+    "animal_name": "Cattle",
+    "animal_category": "Large Livestock",
+    "feeding_advice": "Cattle should receive a balanced diet containing good-quality pasture, grasses, legumes and other suitable feed resources. Provide adequate clean drinking water every day. During dry periods when pasture is limited, provide conserved feeds such as hay and appropriate supplementary feeds.",
+    "housing_advice": "Provide cattle with a clean, dry and well-ventilated shelter that protects them from heavy rain, excessive heat and cold conditions. Keep the housing area clean and provide enough space for movement, feeding and resting. Avoid overcrowding.",
+    "common_diseases": "Common cattle diseases include East Coast fever, anaplasmosis, babesiosis, foot-and-mouth disease, lumpy skin disease and contagious bovine pleuropneumonia (CBPP).",
+    "disease_prevention": "Maintain good hygiene, provide adequate nutrition and clean water, and follow recommended vaccination and disease-control programs. Isolate sick animals and seek assistance from a qualified veterinary professional. Avoid introducing animals of unknown health status into the herd without appropriate checks.",
+    "management_advice": "Monitor cattle regularly for changes in appetite, behavior, body condition and signs of illness. Maintain appropriate records of treatments, vaccinations and breeding. Provide adequate feed, water and shelter, and seek veterinary assistance when animals show signs of serious illness.",
+    "created_at": "2026-08-15T09:55:22.908Z"
+  }
+},
+{
+  "model": "advisory.livestockadvisory",
+  "pk": 2,
+  "fields": {
+    "animal_name": "Goats",
+    "animal_category": "Small Livestock",
+    "feeding_advice": "Goats should have access to good-quality grasses, browse, legumes and other suitable feeds. Provide clean drinking water every day. During dry periods, supplement available pasture with hay, crop residues and appropriate supplementary feeds.",
+    "housing_advice": "Provide goats with a clean, dry and well-ventilated shelter that protects them from rain, strong winds and excessive heat. Keep the floor and surrounding area clean and dry. Provide enough space for resting and movement and avoid overcrowding.",
+    "common_diseases": "Common goat diseases include peste des petits ruminants (PPR), contagious caprine pleuropneumonia (CCPP), foot rot, pneumonia, internal parasites and external parasites.",
+    "disease_prevention": "Maintain clean housing, provide adequate nutrition and clean water, and follow recommended vaccination programs. Regularly inspect goats for signs of illness and parasites. Isolate sick animals and seek veterinary assistance when necessary. Quarantine newly introduced animals before mixing them with the herd.",
+    "management_advice": "Monitor goats regularly for changes in appetite, behavior and body condition. Maintain records of vaccinations, treatments and breeding. Control parasites through appropriate veterinary guidance, provide suitable shelter and ensure pregnant and young goats receive adequate nutrition and care.",
+    "created_at": "2026-08-15T10:00:45.353Z"
+  }
+},
+{
+  "model": "advisory.livestockadvisory",
+  "pk": 3,
+  "fields": {
+    "animal_name": "Poultry",
+    "animal_category": "Poultry",
+    "feeding_advice": "Poultry should receive a balanced diet appropriate for their age and production stage. Provide clean drinking water at all times. Chicks require suitable starter feed, while growers and laying birds need feed formulated for their nutritional requirements.",
+    "housing_advice": "Provide a clean, dry and well-ventilated poultry house that protects birds from rain, excessive heat, predators and other environmental hazards. Avoid overcrowding and clean the housing area and feeding equipment regularly.",
+    "common_diseases": "Common poultry diseases include Newcastle disease, infectious bursal disease (Gumboro), fowl pox, coccidiosis and respiratory infections.",
+    "disease_prevention": "Maintain good hygiene and follow recommended vaccination programs. Keep drinking water and feeding equipment clean. Limit unnecessary visitors and contact with other birds. Isolate sick birds and seek veterinary advice when disease is suspected. Practice good biosecurity when introducing new birds.",
+    "management_advice": "Monitor birds regularly for changes in feeding, drinking, movement, egg production and general behavior. Provide adequate feed, clean water, ventilation and appropriate lighting. Keep accurate records of vaccinations, mortality and production, and promptly separate birds showing signs of illness.",
+    "created_at": "2026-08-15T10:05:41.976Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 1,
+  "fields": {
+    "name": "AkechGarang",
+    "email": "a.garang218@gmail.com",
+    "subject": "FEEDBACKS",
+    "message": "AgriGuide is easy to use",
+    "created_at": "2026-08-19T14:21:21.622Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 2,
+  "fields": {
+    "name": "AkechGarang",
+    "email": "a.garang218@gmail.com",
+    "subject": "FEEDBACKS",
+    "message": "I like this app",
+    "created_at": "2026-08-22T12:09:13.097Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 3,
+  "fields": {
+    "name": "AkechGarang",
+    "email": "a.garang218@gmail.com",
+    "subject": "thanks",
+    "message": "good work",
+    "created_at": "2026-08-25T14:57:45.148Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 4,
+  "fields": {
+    "name": "AkechGarang",
+    "email": "a.garang218@gmail.com",
+    "subject": "thanks",
+    "message": "grateful",
+    "created_at": "2026-08-25T15:01:50.652Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 5,
+  "fields": {
+    "name": "thon dau",
+    "email": "thonboquedau@gmail.com",
+    "subject": "helpful",
+    "message": "thank you",
+    "created_at": "2026-08-26T09:12:48.846Z"
+  }
+},
+{
+  "model": "advisory.feedback",
+  "pk": 6,
+  "fields": {
+    "name": "Achuil",
+    "email": "achuil.johnson723@gmail.com",
+    "subject": "weather",
+    "message": "i delighted to see weather updates",
+    "created_at": "2026-09-29T09:55:41.607Z"
+  }
+}
+]
