@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather & Farming Calendar | AgriGuide</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e0f2f1;
+            color: #333;
+        }
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #00695c;
+            padding: 12px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #00897b;
+        }
+
+        .welcome-user {
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h2 {
+            color: #00796b;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            line-height: 1.6;
+        }
+
+        /* WEATHER */
+
+        .weather-card {
+            background: white;
+            max-width: 750px;
+            margin: 0 auto 35px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            border-top: 5px solid #00897b;
+        }
+
+        .weather-card h3 {
+            color: #00796b;
+            font-size: 26px;
+            margin-top: 0;
+        }
+
+        .temperature {
+            font-size: 52px;
+            font-weight: bold;
+            color: #00695c;
+            margin: 15px 0;
+        }
+
+        .weather-description {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+        }
+
+        .weather-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .weather-detail {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .weather-detail strong {
+            display: block;
+            color: #00695c;
+            margin-bottom: 7px;
+        }
+
+                /* REAL-TIME FARMER INFORMATION */
+
+        .real-time-section {
+            max-width: 950px;
+            margin: 0 auto 40px;
+        }
+
+        .real-time-header {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            border-top: 5px solid #00897b;
+            margin-bottom: 20px;
+        }
+
+        .real-time-header h2 {
+            color: #00796b;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .real-time-header p {
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .live-status {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .farmer-summary {
+            background: #e0f2f1;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00897b;
+        }
+
+        .farmer-summary h3 {
+            color: #00695c;
+            margin-top: 0;
+        }
+
+        .farmer-summary p {
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .farmer-alert-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        .farmer-alert {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #00897b;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .farmer-alert .alert-icon {
+            font-size: 32px;
+            min-width: 42px;
+        }
+
+        .farmer-alert h3 {
+            color: #00796b;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .farmer-alert p {
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .safe-alert {
+            margin-top: 10px;
+        }
+
+        /* ERROR */
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* SECTION TITLES */
+
+        .section-title {
+            text-align: center;
+            color: #00796b;
+            margin: 40px 0 25px;
+        }
+
+        /* FORECAST */
+
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .forecast-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 4px solid #00897b;
+        }
+
+        .forecast-card h4 {
+            color: #00796b;
+            margin-top: 0;
+        }
+
+        .forecast-temp {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00695c;
+        }
+
+        /* FARMING CALENDAR */
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .calendar-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #00897b;
+        }
+
+        .calendar-card h3 {
+            color: #00796b;
+            margin-top: 0;
+        }
+
+        .calendar-card p {
+            line-height: 1.6;
+        }
+
+        .activity {
+            font-weight: bold;
+            color: #00695c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 50px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+                        .real-time-header {
+                padding: 22px;
+            }
+
+            .real-time-header h2 {
+                font-size: 24px;
+            }
+
+            .farmer-alert {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .farmer-alert .alert-icon {
+                font-size: 28px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px;
+                gap: 5px;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .welcome-user {
+                text-align: center;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .page-title h2 {
+                font-size: 27px;
+            }
+
+            .weather-details {
+                grid-template-columns: 1fr;
+            }
+
+            .temperature {
+                font-size: 42px;
+            }
+
+            .weather-card {
+                padding: 22px;
+            }
+
+            .forecast-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🌾 AgriGuide</h1>
+
+    <p>Mobile-Based Farmer Advisory System</p>
+
+</header>
+
+<nav>
+
+    <a href="{% url 'home' %}">
+        Home
+    </a>
+
+    <a href="{% url 'crop_advisory' %}">
+        Crop Advisory
+    </a>
+
+    <a href="{% url 'livestock_advisory' %}">
+        Livestock
+    </a>
+
+    <a href="{% url 'pest_disease' %}">
+        Pest & Disease
+    </a>
+
+    <a href="{% url 'farming_tips' %}">
+        Farming Tips
+    </a>
+
+    <a href="{% url 'weather_calendar' %}">
+        🌦️ Weather & Calendar
+    </a>
+    <a href="{% url 'feedback' %}">
+        feedback
+    </a>
+
+    <a href="{% url 'about' %}">
+        About
+    </a>
+
+    {% if user.is_authenticated %}
+
+        <span class="welcome-user">
+            👨‍🌾 Welcome, {{ user.username }}
+        </span>
+
+        <a href="{% url 'logout' %}">
+            🚪 Logout
+        </a>
+
+    {% else %}
+
+        <a href="{% url 'login' %}">
+            🔐 Farmer Login
+        </a>
+
+        <a href="{% url 'register' %}">
+            👨‍🌾 Register
+        </a>
+
+    {% endif %}
+
+</nav>
+
+<div class="container">
+
+    <div class="page-title">
+
+        <h2>🌦️ Weather & Farming Calendar</h2>
+
+        <p>
+            Current weather information and practical farming
+            guidance for farmers in Juba.
+        </p>
+
+    </div>
+
+    {% if error %}
+
+        <div class="error-message">
+
+            ⚠️ {{ error }}
+
+        </div>
+
+    {% endif %}
+
+        <!-- =====================================================
+         REAL-TIME FARMER INFORMATION
+         ===================================================== -->
+
+    {% if weather %}
+
+        <div class="real-time-section">
+
+            <div class="real-time-header">
+
+                <h2>
+                    📡 Real-Time Farmer Information
+                </h2>
+
+                <p>
+                    Live weather conditions are being used to provide
+                    practical farming guidance for farmers in Juba.
+                </p>
+
+                <div class="live-status">
+                    🟢 LIVE WEATHER INFORMATION
+                </div>
+
+            </div>
+
+            <div class="farmer-summary">
+
+                <h3>
+                    🌱 Current Farming Situation
+                </h3>
+
+                <p>
+                    {{ farmer_summary }}
+                </p>
+
+            </div>
+
+            {% if farmer_alerts %}
+
+                <div class="farmer-alert-grid">
+
+                    {% for alert in farmer_alerts %}
+
+                        <div class="farmer-alert">
+
+                            <div class="alert-icon">
+                                {{ alert.icon }}
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    {{ alert.title }}
+                                </h3>
+
+                                <p>
+                                    {{ alert.message }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+                <div class="farmer-alert safe-alert">
+
+                    <div class="alert-icon">
+                        🌱
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            General Farming Guidance
+                        </h3>
+
+                        <p>
+                            No specific weather alert is currently
+                            detected. Continue monitoring your crops,
+                            livestock, soil moisture and local weather
+                            conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    {% endif %}
+
+    {% if weather %}
+
+        <div class="weather-card">
+
+            <h3>
+                📍 {{ weather.name }}, South Sudan
+            </h3>
+
+            <div class="temperature">
+
+                {{ weather.main.temp|floatformat:0 }}°C
+
+            </div>
+
+            <div class="weather-description">
+
+                {{ weather.weather.0.description }}
+
+            </div>
+
+            <div class="weather-details">
+
+                <div class="weather-detail">
+
+                    <strong>🌡️ Feels Like</strong>
+
+                    {{ weather.main.feels_like|floatformat:0 }}°C
+
+                </div>
+
+                <div class="weather-detail">
+
+                    <strong>💧 Humidity</strong>
+
+                    {{ weather.main.humidity }}%
+
+                </div>
+
+                <div class="weather-detail">
+
+                    <strong>💨 Wind</strong>
+
+                    {{ weather.wind.speed }} m/s
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endif %}
+
+    {% if forecast %}
+
+        <h2 class="section-title">
+            🌤️ Weather Forecast
+        </h2>
+
+        <div class="forecast-grid">
+
+            {% for item in forecast %}
+
+                <div class="forecast-card">
+
+                    <h4>
+                        {{ item.dt_txt }}
+                    </h4>
+
+                    <div class="forecast-temp">
+
+                        {{ item.main.temp|floatformat:0 }}°C
+
+                    </div>
+
+                    <p>
+                        {{ item.weather.0.description }}
+                    </p>
+
+                    <p>
+                        💧 Humidity:
+                        {{ item.main.humidity }}%
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+    <h2 class="section-title">
+        🌱 Farming Calendar
+    </h2>
+
+    <div class="calendar-grid">
+
+        {% for item in farming_calendar %}
+
+            <div class="calendar-card">
+
+                <h3>
+                    📅 {{ item.month }}
+                </h3>
+
+                <p class="activity">
+                    {{ item.activity }}
+                </p>
+
+                <p>
+                    {{ item.advice }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>
+        &copy; 2026 AgriGuide | Farmer Advisory System
+    </p>
+
+</footer>
+
+</body>
+</html>

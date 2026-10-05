@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About AgriGuide | Farmer Advisory System</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8f3;
+            color: #333;
+        }
+
+        header {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #1b5e20;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 6px 4px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h2 {
+            color: #2e7d32;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            line-height: 1.7;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            border-top: 5px solid #2e7d32;
+        }
+
+        .about-card h3 {
+            color: #2e7d32;
+            margin-top: 0;
+            font-size: 25px;
+        }
+
+        .about-card p {
+            line-height: 1.8;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #f9fff9;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #d8ead8;
+        }
+
+        .feature-icon {
+            font-size: 42px;
+        }
+
+        .feature-card h4 {
+            color: #2e7d32;
+            font-size: 19px;
+            margin: 12px 0 8px;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .sdg-box {
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+            border-left: 6px solid #2e7d32;
+        }
+
+        .sdg-box h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .info-card h4 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .info-card p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 5px 7px;
+            }
+
+            .page-title h2 {
+                font-size: 28px;
+            }
+
+            .about-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🌾 AgriGuide</h1>
+
+    <p>
+        Mobile-Based Farmer Advisory System
+    </p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="{% url 'home' %}">
+        Home
+    </a>
+
+    <a href="{% url 'crop_advisory' %}">
+        Crop Advisory
+    </a>
+
+    <a href="{% url 'livestock_advisory' %}">
+        Livestock
+    </a>
+
+    <a href="{% url 'pest_disease' %}">
+        Pest & Disease
+    </a>
+
+    <a href="{% url 'farming_tips' %}">
+        Farming Tips
+    </a>
+    <a href="{% url 'weather_calendar' %}">
+        Weather & Calendar
+    </a>
+    <a href="{% url 'feedback' %}">
+        feedback
+    </a>    
+
+    <a href="{% url 'about' %}">
+        About
+    </a>
+
+</nav>
+
+
+<div class="container">
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-title">
+
+        <h2>
+            ℹ️ About AgriGuide
+        </h2>
+
+        <p>
+            Learn about the purpose, features and objectives
+            of the AgriGuide Farmer Advisory System.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT THE SYSTEM -->
+
+    <section class="about-card">
+
+        <h3>
+            🌱 What is AgriGuide?
+        </h3>
+
+        <p>
+            AgriGuide is a mobile-based farmer advisory system
+            designed to provide smallholder farmers with
+            accessible, practical and useful agricultural
+            information.
+        </p>
+
+        <p>
+            The system provides farmers with information about
+            crop production, livestock management, common pests
+            and diseases, farming practices and other agricultural
+            advisory services.
+        </p>
+
+        <p>
+            AgriGuide aims to help farmers make better farming
+            decisions by providing agricultural information in
+            a simple and easy-to-understand format.
+        </p>
+
+    </section>
+
+
+    <!-- PURPOSE -->
+
+    <section class="about-card">
+
+        <h3>
+            🎯 Purpose of AgriGuide
+        </h3>
+
+        <p>
+            The main purpose of AgriGuide is to improve access
+            to agricultural knowledge among smallholder farmers.
+            Farmers can use the system to search for relevant
+            information and receive practical guidance that can
+            support better agricultural production and farm
+            management.
+        </p>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="about-card">
+
+        <h3>
+            ⭐ Key Features
+        </h3>
+
+        <div class="features">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🌱
+                </div>
+
+                <h4>
+                    Crop Advisory
+                </h4>
+
+                <p>
+                    Provides information about crop planting,
+                    soil requirements, fertilizers, pests,
+                    diseases and harvesting.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🐛
+                </div>
+
+                <h4>
+                    Pest & Disease
+                </h4>
+
+                <p>
+                    Helps farmers identify agricultural pests
+                    and diseases and provides prevention and
+                    control information.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🐄
+                </div>
+
+                <h4>
+                    Livestock Advisory
+                </h4>
+
+                <p>
+                    Provides practical information about
+                    livestock feeding, housing, diseases and
+                    management.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💡
+                </div>
+
+                <h4>
+                    Farming Tips
+                </h4>
+
+                <p>
+                    Provides useful farming practices and
+                    recommendations for improving agricultural
+                    productivity.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+
+    <section class="about-card">
+
+        <h3>
+            🌾 Benefits to Farmers
+        </h3>
+
+        <p>
+            AgriGuide can help farmers access agricultural
+            information without depending entirely on
+            traditional information sources.
+        </p>
+
+        <p>
+            The system can support improved farming decisions,
+            better pest and disease management, improved
+            livestock management and more effective use of
+            agricultural resources.
+        </p>
+
+    </section>
+
+
+    <!-- SDG -->
+
+    <section class="sdg-box">
+
+        <h3>
+            🌍 Sustainable Development Goal
+        </h3>
+
+        <p>
+            AgriGuide supports the United Nations Sustainable
+            Development Goal 2 (SDG 2): Zero Hunger.
+        </p>
+
+        <p>
+            By improving access to agricultural knowledge and
+            supporting smallholder farmers, the system contributes
+            to improved agricultural productivity, food security
+            and sustainable farming practices.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECT INFORMATION -->
+
+    <section class="about-card">
+
+        <h3>
+            🎓 Project Information
+        </h3>
+
+        <div class="project-info">
+
+
+            <div class="info-card">
+
+                <h4>
+                    Project Name
+                </h4>
+
+                <p>
+                    AgriGuide
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h4>
+                    Project Type
+                </h4>
+
+                <p>
+                    Mobile-Based Farmer Advisory System
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h4>
+                    Target Users
+                </h4>
+
+                <p>
+                    Smallholder Farmers
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h4>
+                    Development Technology
+                </h4>
+
+                <p>
+                    Python, Django, HTML5, CSS, OpenWeather API, JavaScript and Database
+                    Technologies
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 AgriGuide | Farmer Advisory System
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Advisory | AgriGuide</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8f3;
+            color: #333;
+        }
+
+        header {
+            background: #2e7d32;
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+        nav {
+            background: #1b5e20;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h2 {
+            color: #2e7d32;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            line-height: 1.6;
+        }
+
+        /* SEARCH AREA */
+
+        .search-box {
+            background: white;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        .search-box h3 {
+            text-align: center;
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-form input {
+            flex: 1;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        .search-form button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .search-form button:hover {
+            background: #1b5e20;
+        }
+        .crop-select {
+            width: 100%; 
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+            background: white;            
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .select-button {
+            width: 100%;        
+            background: #2e7d32;
+            color: white;
+            border: none;
+            padding: 13px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .select-button:hover {
+            background: #1b5e20;
+        }
+        .or-divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #777;
+            font-weight: bold;
+        }
+
+        .clear-button {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            color: #2e7d32;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* CROP CARDS */
+
+        .crop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .crop-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            border-top: 5px solid #2e7d32;
+        }
+
+        .crop-card h3 {
+            color: #2e7d32;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .crop-card p {
+            line-height: 1.6;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .advice-section {
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .pest-disease-section {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f1f8e9;
+    border-radius: 10px;
+    border-left: 5px solid #2e7d32;
+}
+
+.pest-disease-section h4 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+.problem-card {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.problem-card h5 {
+    color: #1b5e20;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.problem-label {
+    font-weight: bold;
+    color: #333;
+}
+
+
+        /* NO RESULTS */
+
+        .no-results {
+            background: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .no-results h3 {
+            color: #c62828;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px 7px;
+            }
+
+            .page-title h2 {
+                font-size: 27px;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .search-form button {
+                width: 100%;
+            }
+
+            .crop-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌾 AgriGuide</h1>
+    <p>Mobile-Based Farmer Advisory System</p>
+</header>
+
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'crop_advisory' %}">Crop Advisory</a>
+    <a href="{% url 'livestock_advisory' %}">Livestock</a>
+    <a href="{% url 'pest_disease' %}">Pest & Disease</a>
+    <a href="{% url 'farming_tips' %}">Farming Tips</a>
+    <a href="{% url 'weather_calendar' %}">Weather & Calendar</a>
+    <a href="{% url 'feedback' %}">feedback</a>
+    <a href="{% url 'about' %}">About</a>
+</nav>
+
+
+<div class="container">
+
+    <div class="page-title">
+        <h2>🌱 Crop Advisory</h2>
+
+        <p>
+            Search for a crop to get practical information about
+            planting, soil requirements, fertilizer, pests, diseases
+            and harvesting.
+        </p>
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+    <h3>🌱 Find Your Crop</h3>
+
+    <!-- CROP DROPDOWN -->
+
+    <form method="GET" action="{% url 'crop_advisory' %}">
+
+        <select name="crop" class="crop-select">
+
+            <option value="">-- Select a Crop --</option>
+
+            {% for crop in all_crops %}
+
+                <option value="{{ crop.crop_name }}"
+                    {% if selected_crop == crop.crop_name %}selected{% endif %}>
+
+                    {{ crop.crop_name }}
+
+                </option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit" class="select-button">
+            View Advisory
+        </button>
+
+    </form>
+
+
+    <!-- OR SEARCH BY NAME -->
+
+    <div class="or-divider">
+        OR
+    </div>
+
+    <form method="GET"
+        action="{% url 'crop_advisory' %}"
+        class="search-form">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Enter crop name e.g. Maize"
+            value="{{ search_query }}"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    {% if search_query or selected_crop %}
+
+        <a href="{% url 'crop_advisory' %}" class="clear-button">
+            Clear Selection
+        </a>
+
+    {% endif %}
+
+</div>
+
+
+    <!-- RESULTS -->
+
+    {% if crops %}
+
+        <div class="crop-grid">
+
+            {% for crop in crops %}
+
+                <div class="crop-card">
+
+                    <h3>🌾 {{ crop.crop_name }}</h3>
+
+                    <p>
+                        <span class="label">Category:</span>
+                        {{ crop.crop_category }}
+                    </p>
+
+                    <p>
+                        <span class="label">Planting Season:</span>
+                        {{ crop.planting_season }}
+                    </p>
+
+                    <p>
+                        <span class="label">Soil Type:</span>
+                        {{ crop.soil_type }}
+                    </p>
+
+
+                    <div class="advice-section">
+                        <h4>🌱 Planting Advice</h4>
+                        <p>{{ crop.planting_advice }}</p>
+                    </div>
+
+
+                    <div class="advice-section">
+                        <h4>🧪 Fertilizer Advice</h4>
+                        <p>{{ crop.fertilizer_advice }}</p>
+                    </div>
+
+
+                    <div class="advice-section">
+                        <h4>🐛 Pest Information</h4>
+                        <p>{{ crop.pest_information }}</p>
+                    </div>
+
+
+                    <div class="advice-section">
+                        <h4>🦠 Disease Information</h4>
+                        <p>{{ crop.disease_information }}</p>
+                    </div>
+                    <div class="advice-section">
+                        <h4>🌽 Harvesting Advice</h4>
+                        <p>{{ crop.harvesting_advice }}</p>
+                    </div>
+
+
+
+                    <div class="pest-disease-section">
+
+    <h4>🐛 Pest & Disease Advisories</h4>
+
+    {% for problem in pest_diseases %}
+
+        {% if problem.crop_name|lower == crop.crop_name|lower %}
+
+            <div class="problem-card">
+
+                <h5>🦠 {{ problem.problem_name }}</h5>
+
+                <p>
+                    <span class="problem-label">Type:</span>
+                    {{ problem.problem_type }}
+                </p>
+
+                <p>
+                    <span class="problem-label">Symptoms:</span>
+                    {{ problem.symptoms }}
+                </p>
+
+                <p>
+                    <span class="problem-label">Causes:</span>
+                    {{ problem.causes }}
+                </p>
+
+                <p>
+                    <span class="problem-label">Prevention:</span>
+                    {{ problem.prevention }}
+                </p>
+
+                <p>
+                    <span class="problem-label">Control Measures:</span>
+                    {{ problem.control_measures }}
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+</div>
+
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="no-results">
+
+            <h3>❌ Crop Not Found</h3>
+
+            <p>
+                We could not find a crop matching
+                "<strong>{{ search_query }}</strong>".
+            </p>
+
+            <p>
+                Please check the spelling and try again.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+
+<footer>
+    <p>&copy; 2026 AgriGuide | Farmer Advisory System</p>
+</footer>
+
+</body>
+</html>

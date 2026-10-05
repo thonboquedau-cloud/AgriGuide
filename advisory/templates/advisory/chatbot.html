@@ -1,0 +1,261 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgriGuide Bot</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f8f3;
+            color: #333;
+        }
+
+        .header {
+            background: #2e7d32;
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .header p {
+            margin: 6px 0 0;
+            font-size: 14px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 850px;
+            margin: 30px auto;
+        }
+
+        .chat-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .bot-introduction {
+            background: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .bot-introduction strong {
+            color: #1b5e20;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+        }
+
+        button {
+            margin-top: 12px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #2e7d32;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        .question {
+            margin-top: 25px;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .answer {
+            margin-top: 15px;
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 95%;
+                margin: 20px auto;
+            }
+
+            .chat-box {
+                padding: 18px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🤖 AgriGuide Bot</h1>
+
+        <p>
+            Mobile-Based Farmer Advisory System
+        </p>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="chat-box">
+
+            <div class="bot-introduction">
+
+                <strong>Welcome to AgriGuide Bot!</strong>
+
+                <p>
+                    Ask me about crops, pests and diseases,
+                    farming practices, livestock, planting,
+                    harvesting, soil, fertilizer and other
+                    agricultural information available in
+                    the AgriGuide knowledge base.
+                </p>
+
+            </div>
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <textarea
+                    name="question"
+                    placeholder="Example: How do I control Fall Armyworm?"
+                    required>{{ question }}</textarea>
+
+                <button type="submit">
+                    🤖 Ask AgriGuide
+                </button>
+
+            </form>
+
+
+            {% if question %}
+
+                <div class="question">
+
+                    <strong>
+                        👨‍🌾 Your Question:
+                    </strong>
+
+                    <p>
+                        {{ question }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+
+            {% if answer %}
+
+                <div class="answer">
+
+                    {{ answer|safe }}
+
+                </div>
+
+            {% endif %}
+
+
+            <a
+                href="{% url 'farmer_dashboard' %}"
+                class="back-link">
+
+                ← Back to Farmer Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
